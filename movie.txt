@@ -1,0 +1,15 @@
+1. select mov_title,mov_year from movies;
+2. select mov_year from movies where mov_title='American beauty';
+3. select * from movies where mov_year='1999';
+4. select * from movies where mov_year<1998;
+5. select mov_title from movies union (select rev_name from reviewer);
+6. select reviewer.rev_name from reviewer,rating where reviewer.rev_id= rating.rev_id and rev_starts>=7 and reviewer.rev_name is not null; 
+7.SELECT mov_title
+FROM movie
+WHERE mov_id NOT IN (
+SELECT mov_id 
+FROM rating
+);
+8.select mov_title from movies where mov_id in(901,905,907,);
+9. select * from movies where mov_title LIKE '%BOOGIE NIGHT%' ORDER BY mov_year ASC;
+10.select act_id from actor where act_fname LIKE 'woody%' and act_lname LIKE 'allen';
